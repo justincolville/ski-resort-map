@@ -509,6 +509,124 @@ function getBackgroundCanvasURL(height, width) {
         ]
       }
     },
+    getRoadsRenderer() {
+      return {
+        type: "unique-value",
+        field: "display_type",
+        defaultSymbol: {
+          type: "line-3d",
+          symbolLayers: [
+            {
+              type: "line",
+              material: { color: style.skiTrails.difficult.color },
+              size: style.skiTrails.size
+            },
+            {
+              type: "line",
+              material: { color: style.skiTrails.difficult.outline },
+              size: style.skiTrails.outlineSize
+            }
+          ]
+        },
+        uniqueValueInfos: [
+          {
+            value: "5",
+            symbol: {
+              type: "line-3d",
+              symbolLayers: [
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.park.color },
+                  size: style.skiTrails.size
+                },
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.park.outline },
+                  size: style.skiTrails.outlineSize
+                }
+              ]
+            },
+            label: "Terrain parks"
+          },
+          {
+            value: "4",
+            symbol: {
+              type: "line-3d",
+              symbolLayers: [
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.difficult.color },
+                  size: style.skiTrails.size
+                },
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.difficult.outline },
+                  size: style.skiTrails.outlineSize
+                }
+              ]
+            },
+            label: "Difficult - black diamond"
+          },
+          {
+            value: "3",
+            symbol: {
+              type: "line-3d",
+              symbolLayers: [
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.vDifficult.color },
+                  size: style.skiTrails.size
+                },
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.vDifficult.outline },
+                  size: style.skiTrails.outlineSize
+                }
+              ]
+            },
+            label: "Very difficult - double black diamond"
+          },
+          {
+            value: "2",
+            symbol: {
+              type: "line-3d",
+              symbolLayers: [
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.easy.color },
+                  size: style.skiTrails.size
+                },
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.easy.outline },
+                  size: style.skiTrails.outlineSize
+                }
+              ]
+            },
+            label: "Easy - blue square"
+          },
+          {
+            value: "1",
+            symbol: {
+              type: "line-3d",
+              symbolLayers: [
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.easiest.color },
+                  size: style.skiTrails.size
+                },
+                {
+                  type: "line",
+                  material: { color: style.skiTrails.easiest.outline },
+                  size: style.skiTrails.outlineSize
+                }
+              ]
+            },
+            label: "Easiest - green circle"
+          }
+        ]
+      }
+    },
     getModelsRenderer() {
       return {
         type: "unique-value",

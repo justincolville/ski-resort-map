@@ -66,7 +66,7 @@ define([
 
             // Add new wall vertex
             const bottomVertex = [].concat.apply([], verticesZ[vIdx1]);
-            bottomVertex[2] = 4000;
+            bottomVertex[2] = 1000;
             verticesZ.push(bottomVertex);
 
             wallTriangles.push(vIdx2, vIdx3, vIdx1, vIdx4, vIdx3, vIdx2);
@@ -128,9 +128,10 @@ define([
   function getColorFromHeight(value) {
 
     const stops = [
-      { value: 4000, color: new Color("#fff") },
-      { value: 5000, color: new Color("#d1eeff") },
-      { value: 6500, color: new Color("#dbe7ff") }
+      { value: 1000, color: new Color("#57AA53") },
+      { value: 3000, color: new Color("#fff") },
+      { value: 4000, color: new Color("#d1eeff") },
+      { value: 5500, color: new Color("#dbe7ff") }
     ];
     for (let i = 0; i < stops.length; i++) {
       const stop = stops[i];
